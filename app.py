@@ -4,7 +4,10 @@ from flask_login import LoginManager
 from config import Config
 from models import db, login_manager
 from routes import auth_bp, products_bp
-from routes import auth_bp, products_bp, cart_bp, orders_bp
+from routes.auth import auth_bp
+from routes.products import products_bp
+from routes.cart import cart_bp
+from routes.orders import orders_bp
 
 app.register_blueprint(cart_bp)
 app.register_blueprint(orders_bp)
