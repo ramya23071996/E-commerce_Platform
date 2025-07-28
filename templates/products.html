@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Products</h2>
+{% for p in products %}
+  <div class="product-card">
+    <strong>{{ p.name }}</strong> – ₹{{ p.price }}<br>
+    <em>{{ p.category }}</em><br>
+    <a href="{{ url_for('cart_bp.add_to_cart', product_id=p.id) }}">Add to Cart</a>
+  </div>
+{% endfor %}
+{% endblock %}

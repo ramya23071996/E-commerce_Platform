@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>✅ Order Placed!</h2>
+<p>Thank you for shopping. Your order ID: <strong>{{ order.id }}</strong><br>
+Total paid: ₹{{ order.total_price }}</p>
+<a href="/products">Continue Shopping</a>
+{% endblock %}
